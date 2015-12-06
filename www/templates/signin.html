@@ -1,0 +1,28 @@
+<ion-view>
+     <ion-content class="home_content" scroll="false" style="padding-top:65px;">
+        <div class="bar bar-header" style="background:transparent; border-bottom:1px solid #999;	">
+            <button class="button button-clear icon ion-ios-arrow-left" ng-click="onBack()"></button>
+            <h1 class="title" style="color:white;">Login</h1>
+            <button class="button button-clear" ng-click="onClickSignup()">Signup</button>
+        </div>
+        <br>
+        <label class="item item-input" style="width:80%; margin-left:10%; margin-top:10px; border-radius:7px">
+            <input type="text" placeholder="Email" ng-model="user.email"/>
+        </label>
+        
+        <label class="item item-input" style="width:80%; margin-left:10%; margin-top:10px; border-radius:7px">
+            <input type="password" placeholder="Password"  ng-model="user.password"/>
+        </label>
+        <br><br>
+        <button class="button button-light login_btn" ng-if="login_state == 'login'" ng-click="onSignin()"> LOGIN </button>
+        <button class="button button-light login_btn" ng-if="login_state == 'logining'"> <ion-spinner icon="crescent" style="color:white !important;"></ion-spinner>LOGGING IN...</button>
+        <button class="button button-light login_btn icon-left ion-ios-checkmark-outline" ng-if="login_state == 'logined'" ng-click="onSignin()"> LOGGED IN!</button>
+        <button class="button button-light login_btn" ng-if="login_state == 'failed'" ng-click="onSignin()"> LOGIN FAILED </button>
+        <div style="width:80%; margin-left:10%; margin-top:10px; color:white; font-size:0.8em; text-align:center"  ng-if="login_state == 'failed'">
+            Invalid email or password. Please try again.
+        </div>
+        
+        <br><br>
+        <button class="button signup_btn button-clear" ng-click="onClickForgot()">I forgot my password</button>
+    </ion-content>
+</ion-view>

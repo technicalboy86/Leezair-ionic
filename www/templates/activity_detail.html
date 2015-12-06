@@ -1,0 +1,87 @@
+<ion-view view-title="Surfing Lessons"  hide-back-button="true" hide-tabs>
+	<ion-nav-buttons side="left" >
+        <button class="button button-icon button-clear ion-ios-arrow-left" style="color:#d17c63" ng-click="onBack()">
+        </button>
+      </ion-nav-buttons>
+      
+      <ion-nav-buttons side="right" >
+		<button class="button button-icon button-clear" style="color:#d17c63" ng-click="onShare()">SHARE
+        </button>
+     </ion-nav-buttons>
+  <ion-content class="activity_content has_footerbar">
+      <div class="list" style="padding:0px;" >
+          <div class="item" style="padding:0px;">
+              <div class="activity_img" style="background-image:url('img/activity_image_1.jpg'); height:200px;">
+                  <div class="price_txt" style="top:150px">$50PP</div>
+                  <img src="img/Activity_heart.png" class="heart_img" style="top:150px"/>
+                  <div class="title_txt" style="bottom:100px; font-size:1.3em;">Surfing lessons for beginners</div>
+                  <div class="time_txt" style="bottom:80px">2 HOURS</div>
+              </div>
+          </div>
+		  <a class="item item-icon-left item-icon-right" ng-click="onClickMap()" style="color:#666">
+			<i class="icon ion-ios-location-outline"></i>
+			<h2>123 Beach Rd, Bondi beach</h2>
+			<p>5KM FROM YOU</p>
+			<i class="icon ion-ios-arrow-right"></i>
+		  </a>
+		  <div class="item item-icon-right_c" ng-click="onClickReview()"  style="color:#666">
+			<div class="row" style="margin:0; padding:0; text-align:center; width:150px; ">
+                          <div class="col-75">
+                              <rating ng-model="rate" max="max"  readonly="true"></rating>
+                          </div>
+                          <div class="col-15">
+                              <div style="color:#666; font-size:1.2em;">{{rate}}</div>
+                          </div>
+             </div>
+			<i class="c_icon ion-ios-arrow-right"></i>
+		  </div>
+		  <a class="item item-icon-left item-icon-right" ng-click="onClickCompanyProfile()" style="color:#666">
+			<i class="icon ion-ios-briefcase-outline"></i>
+			<h2>By Company One</h2>
+			<p >3 ACTIVITIES</p>
+			<i class="icon ion-ios-arrow-right"></i>
+		  </a>
+		  <a class="item" href="#" style="color:#666">
+			<h2>Description</h2>
+			<p style="white-space: normal; " >Integer posuere erat a ante venenatis daplibus posuere velit aliquet. Integer posuere erat a ante venenatis dapibus posuere velit.</p>
+		  </a>
+      </div>
+
+	  <div class="list" style="padding:0px; margin-top:10px" >
+          <div class="item" style="padding:0px;">
+              <ion-slide-box show-pager="true" does-continue="true">
+				  <ion-slide>
+					<img src="img/activity_image_1.jpg" style="width:100%"/>
+				  </ion-slide>
+				  <ion-slide>
+					<img src="img/activity_image_2.jpg" style="width:100%" />
+				  </ion-slide>
+				  <ion-slide>
+					<img src="img/activity_image_1.jpg" style="width:100%" />
+				  </ion-slide>
+				</ion-slide-box>
+          </div>
+		  <a class="item " href="#" style="color:#666">
+			Photo Four
+			<span class="item-note">
+			  5 PHOTOS
+			</span>
+		  </a>
+		  
+      </div>
+
+	  <div class="list" style="padding:0px; margin-top:10px" >
+          <a class="item item-icon-right" ng-click="onClickMoreDetail()"  style="color:#666">
+			<h2>MORE DETAILS</h2>
+			<p style="white-space: normal; " >Integer posuere erat a ante venenatis daplibus posuere velit aliquet. Integer posuere erat a ante venenatis dapibus posuere velit.</p>
+			<i class="icon ion-ios-arrow-right"></i>
+		  </a>
+		  
+      </div>
+  </ion-content>
+	<div class="bar bar-footer" style="background:transparent; padding:0px;">
+          <button class="button button-full button-balanced book_footbar_btn"  ng-click="onClickBookingDetail()">
+		  BOOK NOW
+		</button>
+    </div>
+</ion-view>

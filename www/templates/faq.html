@@ -1,0 +1,20 @@
+<ion-view view-title="FAQ's" hide-back-button="true">
+	<ion-nav-buttons side="left" >
+        <button class="button button-icon button-clear ion-ios-arrow-left" style="color:#d17c63" ng-click="onBack()">
+        </button>
+      </ion-nav-buttons>      
+      <ion-nav-buttons side="right" >
+     </ion-nav-buttons>
+     <ion-content class="activity_content">
+		<div class="list faq_list" style="color:#333">
+			<div ng-repeat="item in faqList" >
+				<a class="item item-icon-right" ng-click="onClickItem($index)" ng-class="item.expend?'actived':''">
+					{{item.title}}
+					<i class="icon ion-ios-arrow-down" ng-if="!item.expend"></i>
+					<i class="icon ion-ios-arrow-up" ng-if="item.expend"></i>
+				</a>
+				<div class="faq_description" ng-show="item.expend">{{item.description}}</div>
+			</div>
+	  </div>
+    </ion-content>
+</ion-view>

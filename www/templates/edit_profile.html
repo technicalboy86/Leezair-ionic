@@ -1,0 +1,120 @@
+<ion-view  view-title="Edit My Profile" hide-nav-bar="true">
+	 <div class="bar bar-header" style="background:#344451; border-bottom:1px solid #999;">
+            <button class="button button-clear icon ion-ios-arrow-left" ng-click="onBack()"></button>
+			</button>
+            <h1 class="title" style="color:white;">Edit My Profile</h1>
+			<button class="button button-icon button-clear" style="color:white; font-size:1em;">SAVE
+			</button>
+	</div>
+
+     <ion-content class="home_content" style="padding:10px; padding-top:65px; color:white;">
+		<div class="row" style="font-size:2em;">
+			<div class="col-90">Personal Detail</div>
+			<div class="col-10"><i class="icon ion-card"></i></div>
+		</div>
+		<div class="lbl_txt">NAME & PHOTO</div>
+		<div class="row" style="padding:0px;">
+            <div class="col-67">
+                <label class="item item-input" style="width:95%; margin-top:10px; border-radius:7px">
+                    <input type="text" placeholder="First Name"/>
+                </label>
+                <label class="item item-input" style="width:95%; margin-top:10px; border-radius:7px">
+                    <input type="password" placeholder="Last Name"/>
+                </label>
+            </div>
+            <div class="col-33">
+                <div class="profile_img">
+                    <img src="img/user_profile1.png" style="width:60px; height:60px; background:#999; padding:1px; border-radius:50%;"/>
+                </div>
+            </div>
+        </div>
+
+		<div class="lbl_txt">DATE OF BIRTH</div>
+		<div class="row" style="padding:0px;">
+            <div class="col-33">
+                <label class="item item-input" style="width:95%; margin-right:5%; border-radius:7px">
+                    <input type="text" placeholder="day"/>
+                </label>
+            </div>
+            <div class="col-33">
+                <label class="item item-input" style="width:95%; margin-right:5%; border-radius:7px">
+                    <input type="password" placeholder="month" />
+                </label>
+            </div>
+			<div class="col-34">
+                <label class="item item-input" style=" border-radius:7px">
+                    <input type="password" placeholder="year" />
+                </label>
+            </div>
+        </div>
+
+		<div class="lbl_txt">GENDER</div>
+		<div class="row gender_btn" >
+            <div class="col-50 female_btn actived">
+                Female
+            </div>
+            <div class="col-50 male_btn">
+                Male
+            </div>
+        </div>
+
+		<div class="lbl_txt">ABOUT ME</div>
+		<label class="item item-input" style="border-radius:5px;">
+			  <textarea placeholder="" rows="10"></textarea>
+		</label>
+
+		<hr />
+		<br>
+		<div class="row" style="font-size:2em;">
+			<div class="col-90">Contact</div>
+			<div class="col-10"><i class="icon ion-android-phone-portrait"></i></div>
+		</div>
+
+		<div class="lbl_txt">PHONE NUMBER</div>
+		<label class="item item-input" style="border-radius:7px">
+            <input type="text" placeholder="" />
+        </label>
+
+		<div class="lbl_txt">EMAIL</div>
+		<label class="item item-input" style="border-radius:7px">
+            <input type="text" placeholder="" />
+        </label>
+
+		<hr />
+		<br>
+		<div class="row" style="font-size:2em;">
+			<div class="col-90">Location</div>
+			<div class="col-10"><i class="icon ion-ios-location-outline"></i></div>
+		</div>
+
+		<div class="lbl_txt">ADDRESS</div>
+		<label class="item item-input" style="border-radius:7px">
+            <input type="text" placeholder="" />
+        </label>
+
+		<div class="lbl_txt">CITY</div>
+		<label class="item item-input" style="border-radius:7px">
+            <input type="text" placeholder="" />
+        </label>
+
+		<div class="lbl_txt">ADDRESS</div>
+		<div class="row" style="padding:0px">
+            <div class="col-50">
+               <label class="item item-input" style="width:95%; margin-right:5%; border-radius:7px">
+					<input type="text" placeholder="" />
+			   </label>
+            </div>
+            <div class="col-50">
+               <label class="item item-input" style="width:95%; margin-left:5%; border-radius:7px">
+					<input type="text" placeholder="" />
+			   </label>
+            </div>
+        </div>
+
+		<div class="lbl_txt">COUNTRY</div>
+		<label class="item item-input" style="border-radius:7px">
+            <input type="text" placeholder="" />
+        </label>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,39 @@
+<ion-view view-title="3 Reviews" hide-back-button="true">
+	<ion-nav-buttons side="left" >
+        <button class="button button-icon button-clear ion-ios-arrow-left" style="color:#d17c63" ng-click="onBack()">
+        </button>
+      </ion-nav-buttons>      
+      <ion-nav-buttons side="right" >
+     </ion-nav-buttons>
+     <ion-content class="activity_content has_footerbar">
+		<div class="list" style="padding:0px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);" >
+          <div class="item" style="padding:0px; margin-top:10px; padding-top:5px;" ng-repeat="item in reviewList">
+              <div class="row">
+				<div class="col-20" style="text-align:center;">
+					<img src="{{item.image}}" style=" width:60px; height: 60px;"/>
+				</div>
+				<div class="col-80">
+					<p style="font-size:0.8em; color:#666;">{{item.date}}</p>
+					<h2>{{item.name}}</h2>
+					<div class="row" style="margin:0; padding:0; text-align:center; width:150px; ">
+                          <div class="col-75">
+                              <rating ng-model="rate" max="max" readonly="true"></rating>
+                          </div>
+                          <div class="col-15">
+                              <div style="color:#666; font-size:1.2em;">{{rate}}</div>
+                          </div>
+					</div>
+				</div>
+			  </div>
+			  <div style=" padding:10px; color:#777; font-size:1.2em; white-space:normal;">
+				{{item.description}}
+			  </div>
+          </div>
+		</div>
+    </ion-content>
+	<div class="bar bar-footer" style="background:transparent; padding:0px;">
+          <button class="button button-full button-balanced" style="height:50px; background:#5cc1af; margin:0px;" ng-click="onClickBookingDetail()">
+		  BOOK NOW
+		</button>
+    </div>
+</ion-view>

@@ -1,0 +1,104 @@
+<ion-view view-title="Your Details" hide-back-button="true">
+	<ion-nav-buttons side="left" >
+        <button class="button button-icon button-clear ion-ios-arrow-left" style="color:#d17c63" ng-click="onBack()">
+        </button>
+      </ion-nav-buttons>      
+      <ion-nav-buttons side="right" >
+     </ion-nav-buttons>
+    <ion-content class="activity_content has_footerbar">
+		<div class="list ">
+			<a class="item item-thumbnail-left" href="#">
+			  <img src="img/activity_image_1.jpg">
+			  <h2>Activity name goes here</h2>
+			  <p style="white-space:normal;">Truncated description will do right here here here here here ...  </p>
+			</a>
+			<div class="item" style="text-align:center;">
+				<div class="row">
+					<div class="col-25 finished_step icon-left ion-checkmark-round">
+						<font style="font-size:0.8em;">STEP 1</font>
+					</div>
+					<div class="col-50 step_line"><hr></hr></div>
+					<div class="col-25 completed_step icon-left ion-ios-circle-outline">
+						<font style="font-size:0.8em;">STEP 2</font>
+					</div>
+				</div>
+			</div>
+
+			<div class="item item-icon-left list_divider">
+				<i class="icon ion-card"></i>
+				Personal Details
+			</div>
+			<div class="item">
+				<div class="list list-inset" style="margin-top:0px;">
+					  <label class="item item-input ">
+						<span class="input-label">First Name</span>
+						<input type="text">
+					  </label><br>
+					  <label class="item item-input ">
+						<span class="input-label">Last Name</span>
+						<input type="text">
+					  </label><br>
+					  <label class="item item-input ">
+						<span class="input-label">Email</span>
+						<input type="email">
+					  </label>
+				</div>
+			</div>
+			
+
+			<div class="item item-icon-left list_divider">
+				<i class="icon ion-card"></i>
+				<div class="row">
+					<div class="col-80" style="padding-top:5px;">
+						Payment Details
+					</div>
+					<div class="col-20">
+						<img src="img/visa.png" style="width:30px;"/>
+						<img src="img/credit.png" style="width:30px;" />
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="list list-inset" style="margin-top:0px;">
+					  <label class="item item-input ">
+						<span class="input-label">Number</span>
+						<input type="text">
+					  </label><br>
+					  <div class="row" style="padding:0px;width:100%;">
+							<div class="col-50"  style="padding-right:5px;">
+								<label class="item item-input ">
+									<span class="input-label">Expiry</span>
+									<input type="text">
+								</label>
+							</div>
+							<div class="col-50" style="padding-left:5px;">
+								<label class="item item-input ">
+									<span class="input-label">CCV</span>
+									<input type="text">
+								</label>
+							</div>
+					  </div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="row" style="padding:0px;"  ng-click="onClickSaveCredit()">
+					<div class="col-90"  style="padding-top:5px;">
+						Save Credit Card Details
+					</div>
+					<div class="col-10">
+						<i class="icon ion-ios-checkmark-outline" style="font-size:1.5em; color:#5cc1af" ng-if="saveCredit"></i>
+						<i class="icon ion-ios-circle-outline" style="font-size:1.5em; color:#5cc1af" ng-if="!saveCredit"></i>
+					</div>
+				</div>
+			</div>
+		</div>	
+			<img src="img/pin_btn.png" style="width:60%; margin-left:20%;" />
+		<br><br>
+    </ion-content>
+
+	<div class="bar bar-footer" style="background:transparent; padding:0px;">
+          <button class="button button-full button-balanced book_footbar_btn" ng-click="goBookingConfirmation()">
+		  $115.00 PAY NOW
+		</button>
+    </div>
+</ion-view>

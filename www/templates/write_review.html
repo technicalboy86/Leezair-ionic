@@ -1,0 +1,28 @@
+<ion-view>
+     <ion-content class="home_content" scroll="false" style="padding-top:65px;">
+        <div class="bar bar-header" style="background:transparent; border-bottom:1px solid #999;	">
+            <h1 class="title" style="color:white;">Write a review</h1>
+        </div>
+        
+		<div class="sub_title">
+			What did you think of Activity One?
+		</div>
+		<br>
+		<div class="star_rating">
+			STAR RATING <br>
+			<rating ng-model="item.star" max="max"></rating>
+		</div>
+
+		<div class="star_rating">
+			REVIEW<br>
+			<label class="item item-input" style="border-radius:10px;">
+			  <textarea placeholder="" rows="10"></textarea>
+			</label>
+		</div>
+		
+		<br><br>
+		<button class="button button-light login_btn" ng-if="send_review_state == 'send'" ng-click="onSubmit()"> SUBMIT REVIEW </button>
+		<button class="button button-light login_btn" ng-if="send_review_state == 'sending'"> <ion-spinner icon="crescent" style="color:white !important;"></ion-spinner>SENDING...</button>
+		<button class="button button-light login_btn icon-left ion-ios-checkmark-outline" ng-if="send_review_state == 'sent'">SENT!</button>
+    </ion-content>
+</ion-view>

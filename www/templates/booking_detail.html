@@ -1,0 +1,199 @@
+<ion-view view-title="Booking Details" hide-back-button="true">
+	<ion-nav-buttons side="left" >
+        <button class="button button-icon button-clear ion-ios-arrow-left" style="color:#d17c63" ng-click="onBack()">
+        </button>
+      </ion-nav-buttons>      
+      <ion-nav-buttons side="right" >
+     </ion-nav-buttons>
+    <ion-content class="activity_content has_footerbar">
+		<div class="list ">
+			<a class="item item-thumbnail-left" href="#">
+			  <img src="img/activity_image_1.jpg">
+			  <h2>Activity name goes here</h2>
+			  <p style="white-space:normal;">Truncated description will do right here here here here here ...  </p>
+			</a>
+			<div class="item" style="text-align:center;">
+				<div class="row">
+					<div class="col-25 completed_step icon-left ion-ios-circle-outline">
+						<font style="font-size:0.8em;">STEP 1</font>
+					</div>
+					<div class="col-50 step_line"><hr></hr></div>
+					<div class="col-25 uncompleted_step icon-left ion-ios-circle-outline">
+						<font style="font-size:0.8em;">STEP 2</font>
+					</div>
+				</div>
+			</div>
+
+			<div class="item item-icon-left list_divider">
+				<i class="icon ion-ios-people-outline"></i>
+				<div class="row">
+					<div class="col-90">Participants</div>
+					<div class="col-10 list_badge">{{participants.adults}}</div>
+				</div>
+			</div>
+
+			<div class="item">
+				<div class="row">
+					<div class="col-50">
+						<font style="font-weight:bold;">Adults</font><br>
+						<font style="font-size:0.8em; color:#666;">YEARS</font><br>
+						<font style="font-size:0.8em; color:#666;">$100.00 PER PERSON</font>
+					</div>
+					<div class="col-50" style="text-align:center;">
+						<div class="row custom_number_box">
+							<div class="col-25 minus_btn"  ng-click="onMinusAdults()">
+								<i class="icon ion-android-remove"></i>
+							</div>
+							<div class="col-50 number_txt">{{participants.adults}}</div>
+							<div class="col-25 plus_btn" ng-click="onPlusAdults()">
+								<i class="icon ion-android-add"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="row">
+					<div class="col-50">
+						<font style="font-weight:bold;">Children</font><br>
+						<font style="font-size:0.8em; color:#666;">YEARS 0 to 15</font><br>
+						<font style="font-size:0.8em; color:#666;">$100.00 PER PERSON</font>
+					</div>
+					<div class="col-50" style="text-align:center;">
+						<div class="row custom_number_box">
+							<div class="col-25 minus_btn" ng-click="onMinusChildren()">
+								<i class="icon ion-android-remove"></i>
+							</div>
+							<div class="col-50 number_txt">{{participants.children}}</div>
+							<div class="col-25 plus_btn" ng-click="onPlusChildren()">
+								<i class="icon ion-android-add"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="item item-icon-left list_divider" style="margin-top:10px;">
+				<i class="icon ion-ios-calendar-outline"></i>
+				<div class="row">
+					<div class="col-67">Date</div>
+					<div class="col-33 list_badge">19 MARCH</div>
+				</div>
+			</div>
+			<div id="eventCalendarInline"></div>
+
+			<div class="item item-icon-left list_divider" style="margin-top:10px;">
+				<i class="icon ion-ios-clock-outline"></i>
+				<div class="row">
+					<div class="col-67">Sessions</div>
+					<div class="col-33 list_badge">8:00 AM</div>
+				</div>
+			</div>
+			<div class="list">
+
+			  <label class="item item-radio">
+				<input type="radio" name="group">
+				<div class="item-content">
+				  <div class="row">
+					<div class="col-50">8AM to 10AM</div>
+					<div class="col-40" style="font-size:0.8em; color:#999;">3 PLACES LEFT</div>
+					<div class="col-10" style="font-size:1.5em; color:#5cc1af; right:14px; margin-top:-6px; position:absolute;"><i class="icon ion-ios-circle-outline"></i></div>
+				  </div>
+				</div>
+				<i class="radio-icon ion-ios-circle-filled" style="color:#5cc1af"></i>
+			  </label>
+
+			  <label class="item item-radio">
+				<input type="radio" name="group">
+				<div class="item-content">
+				  <div class="row">
+					<div class="col-50">8AM to 10AM</div>
+					<div class="col-40" style="font-size:0.8em; color:#999;">3 PLACES LEFT</div>
+					<div class="col-10" style="font-size:1.5em; color:#5cc1af; right:14px; margin-top:-6px; position:absolute;"><i class="icon ion-ios-circle-outline"></i></div>
+				  </div>
+				</div>
+				<i class="radio-icon ion-ios-circle-filled"  style="color:#5cc1af"></i>
+			  </label>
+
+			  <label class="item item-radio">
+				<input type="radio" name="group">
+				<div class="item-content">
+				  <div class="row">
+					<div class="col-50">8AM to 10AM</div>
+					<div class="col-40" style="font-size:0.8em; color:#999;">3 PLACES LEFT</div>
+					<div class="col-10" style="font-size:1.5em; color:#5cc1af; right:14px; margin-top:-6px; position:absolute;"><i class="icon ion-ios-circle-outline"></i></div>
+				  </div>
+				</div>
+				<i class="radio-icon ion-ios-circle-filled"  style="color:#5cc1af"></i>
+			  </label>
+			</div>
+			
+			<div class="item item-icon-left list_divider" style="margin-top:10px;">
+				<i class="icon ion-pin"></i>
+				Required
+			</div>
+			<div class="item">
+				Dietary requirements (optional)<br>
+				<div class="list"  style="margin-top:5px">
+				  <label class="item item-input item-select">
+					<div class="input-label" style="width:20px !important;">
+					  &nbsp;
+					</div>
+					<select>
+					  <option>Blue</option>
+					  <option selected>Green</option>
+					  <option>Red</option>
+					</select>
+				  </label>
+
+				</div>
+			</div>
+
+			<div class="item item-icon-left list_divider" style="margin-top:10px;">
+				<i class="icon ion-ios-albums-outline"></i>
+				Extras
+			</div>
+			<div class="item">
+				Hotel pickup (optional)<br>
+				<div class="list" style="margin-top:5px">
+				  <label class="item item-input item-select">
+					<div class="input-label" style="width:20px !important;">
+					  &nbsp;
+					</div>
+					<select>
+					  <option>Blue</option>
+					  <option selected>Green</option>
+					  <option>Red</option>
+					</select>
+				  </label>
+
+				</div>
+			</div>
+
+
+			<div class="item" style="margin-top:10px;">
+				<div class="row" style="border-bottom:1px solid #999; font-size:1.4em;">
+					<div class="col-67">Total <i class="icon ion-chevron-down"></i></div>
+					<div class="col-33" style="font-size:0.8em; color:#5cc1af; text-align:right">$115.00</div>
+				</div>
+				<div class="row" style="color:#999; margin-top:15px;">
+					<div class="col-80">Participants</div>
+					<div class="col-20">1</div>
+				</div>
+				<div class="row" style="color:#999">
+					<div class="col-80">ADULT</div>
+					<div class="col-20">1</div>
+				</div>
+				
+				<br>
+				<p style="color:#666">Have a voucher code?</p>
+			</div>
+		</div>	
+    </ion-content>
+
+	<div class="bar bar-footer" style="background:transparent; padding:0px;">
+          <button class="button button-full button-balanced book_footbar_btn" ng-click="goYourDetail()">
+		  GO TO SECURE PAYMENT
+		</button>
+    </div>
+</ion-view>

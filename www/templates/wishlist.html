@@ -1,0 +1,41 @@
+<ion-view view-title="Wishlist"  hide-back-button="true">
+    <ion-nav-buttons side="left" >
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left" style="color:#d17c63">
+        </button>
+      </ion-nav-buttons>
+      
+      <ion-nav-buttons side="right" >
+          <button class="button button-clear" style="color:#d17c63">SHARE
+          </button>
+     </ion-nav-buttons>
+  <ion-content>
+      <div class="list" style="padding:0px; background:#f2f2f2; padding-bottom:60px;">
+          <div class="item activity_item" ng-repeat="item in wishList" ng-click="onActivityDetail($index)">
+              <div class="activity_img" style="background-image:url('{{item.image}}')">
+                  <div class="price_txt">${{item.price}}</div>
+                  <img src="img/Activity_heart.png" class="heart_img"/>
+                  <div class="title_txt">{{item.title}}</div>
+                  <div class="time_txt">{{item.time}}</div>
+              </div>
+              <div class="row">
+                  <div class="col-60" style="text-align:left;">
+                      <div style="color:#333; width:100%">{{item.city}}</div>
+                      <div style="color:#999; font-size:0.8em; width:100%">{{item.distance}}</div>
+                  </div>
+                  <div class="col-40" style=" padding-top:10px;">
+                      <div class="row" style="margin:0; padding:0; text-align:center; ">
+                          <div class="col-75">
+                              <rating ng-model="item.star" max="max"></rating>
+                          </div>
+                          <div class="col-15">
+                              <div style="color:#666; font-size:1.2em;">{{item.star}}</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+  </ion-content>
+
+</ion-view>

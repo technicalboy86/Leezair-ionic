@@ -1,0 +1,24 @@
+<ion-view view-title="Discover" hide-back-button="true" >
+	<ion-nav-buttons side="left" >
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left" style="color:#d17c63">
+        </button>
+      </ion-nav-buttons>
+      
+      <ion-nav-buttons side="right" >
+          <button class="button button-icon button-clear ion-ios-search" menu-toggle="right" style="color:#d17c63">
+          </button>
+     </ion-nav-buttons>
+
+  <ion-content>
+      <div class="list" style="padding:0px; background:#f2f2f2; padding-bottom:60px;">
+          <div class="item discover_item" ng-repeat="item in discoverList">
+              <div class="discover_img" style="background-image:url('{{item.image}}')">
+                  <div class="title_txt">{{item.title}}</div>
+                  <div class="desc_txt">{{item.description}}</div>
+              </div>
+          </div>
+      </div>
+      
+  </ion-content>
+
+</ion-view>

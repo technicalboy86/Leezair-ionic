@@ -1,0 +1,38 @@
+<ion-view>
+     <ion-content class="home_content" scroll="false" style="padding-top:65px;">
+        <div class="bar bar-header" style="background:transparent; border-bottom:1px solid #999;	">
+            <button class="button button-clear icon ion-ios-arrow-left" ng-click="onBack()"></button>
+            <h1 class="title" style="color:white;">Signup</h1>
+            <button class="button button-clear" ng-click="onClickLogin()">login</button>
+        </div>
+        <br>
+        <div class="row" style="padding:0px;width:80%; margin-left:10%;">
+            <div class="col-67">
+                <label class="item item-input" style="width:95%; margin-top:10px; border-radius:7px">
+                    <input type="text" placeholder="First Name" ng-model="user.firstname"/>
+                </label>
+                <label class="item item-input" style="width:95%; margin-top:10px; border-radius:7px">
+                    <input type="password" placeholder="Last Name"  ng-model="user.lastname"/>
+                </label>
+            </div>
+            <div class="col-33">
+                <div class="profile_img">
+                    <img src="img/user_profile1.png" style="width:60px; height:60px; background:#999; padding:1px; border-radius:50%;"/>
+                </div>
+            </div>
+        </div>
+        <label class="item item-input" style="width:80%; margin-left:10%; margin-top:10px; border-radius:7px">
+            <input type="text" placeholder="Email" ng-model="user.email"/>
+        </label>
+        
+        <label class="item item-input" style="width:80%; margin-left:10%; margin-top:10px; border-radius:7px">
+            <input type="password" placeholder="Password"  ng-model="user.password"/>
+        </label>
+        
+        <br><br>
+        <button class="button button-light login_btn" ng-if="signup_state == 'sign'" ng-click="onSignup()"> SIGN UP </button>
+        <button class="button button-light login_btn" ng-if="signup_state == 'signing'"> <ion-spinner icon="crescent" style="color:white !important;"></ion-spinner>SIGNING UP...</button>
+        <button class="button button-light login_btn icon-left ion-ios-checkmark-outline" ng-if="signup_state == 'signed'" ng-click="onSignup()"> DONE!</button>
+
+    </ion-content>
+</ion-view>

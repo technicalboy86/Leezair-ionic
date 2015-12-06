@@ -1,0 +1,90 @@
+<ion-view view-title="Bookings"   hide-back-button="true">
+  <ion-nav-buttons side="left" >
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left" style="color:#d17c63">
+        </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right" >
+  </ion-nav-buttons>
+
+  <div class="tabs-striped tabs-top tabs-color-light">
+    <div class="tabs"  style="background:#ff977a;">
+      <a class="tab-item " ng-click="onPast()" ng-class="currentTab == 'past'?'active':''">
+        Past
+      </a>
+      <a class="tab-item" ng-click="onComingUp()" href="#"  ng-class="currentTab != 'past'?'active':''">
+        Coming up
+      </a>
+    </div>
+  </div>
+
+  <ion-content style="background:#f2f2f2; padding-top:65px; color:#666;">
+	  <div class="past_rect" ng-if="currentTab == 'past'">
+		<div class="list">
+		  <a class="item" href="#">
+			Surfing lessons
+		  </a>
+
+		  <a class="item item-icon-left" href="#">
+			<i class="icon ion-calendar"></i>
+			16th Dec 2014
+			<span class="item-note">
+			  3pm to 5pm
+			</span>
+		  </a>
+		  
+		  <a class="item item-icon-left" href="#">
+			<i class="icon ion-ios-location-outline"></i>
+			123 Beach Rd, Bondi beach
+		  </a>
+
+		  <a class="item " href="#" style="text-align:center">
+			<div class="row" style="padding:0px; height:40px; line-height:40px; border:1px solid #5cc1af; border-radius:30px;">
+				<div class="col-50" style="color:#5cc1af;" ng-click="goWriteReview()">
+					REVIEW
+				</div>
+				<div class="col-50" style=" background:#5cc1af; border-top-right-radius:30px; border-bottom-right-radius:30px; color:white;" ng-click="onClickBookingDetail()">
+					BOOK NOW
+				</div>
+			</div>
+		  </a>
+
+		</div>
+      </div>
+
+
+      <div class="past_rect" ng-if="currentTab != 'past'">
+		<div class="list">
+		  <a class="item" href="#">
+			Surfing lessons
+		  </a>
+
+		  <a class="item item-icon-left" href="#">
+			<i class="icon ion-calendar"></i>
+			Tomorrow
+			<span class="item-note">
+			  3pm to 5pm
+			</span>
+		  </a>
+		  
+		  <a class="item item-icon-left item-icon-right" ng-click="goMap()">
+			<i class="icon ion-ios-location-outline"></i>
+			123 Beach Rd, Bondi beach
+			<i class="icon ion-ios-arrow-right"></i>
+		  </a>
+
+		  <a class="item" href="#">
+			<div class="row">
+				<div class="col-33">
+					<button class="button button-clear">Cancel</buttom>
+				</div>
+				<div class="col-67">
+					<button class="button button-balanced" style="width:100%; border-radius:30px;" ng-click="goShare()">SHARE</buttom>
+				</div>
+			</div>
+		  </a>
+
+		</div>
+      </div>
+  </ion-content>
+
+</ion-view>

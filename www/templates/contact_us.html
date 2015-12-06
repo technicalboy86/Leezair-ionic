@@ -1,0 +1,39 @@
+<ion-view  view-title="Contact us" hide-nav-bar="true">
+     <ion-content class="home_content">
+		<div class="bar bar-header" style="background:transparent; border-bottom:1px solid #999;">
+            <button class="button button-clear icon ion-ios-arrow-left" ng-click="onBack()"></button>
+            <h1 class="title" style="color:white;">Contact us</h1>
+		</div>
+        <br><br><br>
+		<div style="text-align:center;width:100%">
+			<img src="img/contact_us.png" class="share_mark"/>
+		</div>
+		<br>
+		<div class="sub_title">
+			Want to give us feedback or say hi?
+		</div>
+		<br>
+		<div class="sub_title1">
+			We'd love to hear from you. just fill out the form below and we'll get back to as soon as we can.
+		</div>
+		
+		<div class="star_rating">
+			Subject<br>
+			<label class="item item-input" style="border-radius:10px; margin-top:5px;">
+            <input type="text" placeholder="" />
+        </label>
+		</div>
+		<div class="star_rating">
+			Message<br>
+			<label class="item item-input" style="border-radius:10px; margin-top:5px;">
+			  <textarea placeholder="" rows="5"></textarea>
+			</label>
+		</div>        
+        
+		<br>
+		<button class="button button-light login_btn" ng-if="send_review_state == 'send'" ng-click="onSubmit()"> SUBMIT REVIEW </button>
+		<button class="button button-light login_btn" ng-if="send_review_state == 'sending'"> <ion-spinner icon="crescent" style="color:white !important;"></ion-spinner>SENDING...</button>
+		<button class="button button-light login_btn icon-left ion-ios-checkmark-outline" ng-if="send_review_state == 'sent'">SENT!</button>
+		
+    </ion-content>
+</ion-view>

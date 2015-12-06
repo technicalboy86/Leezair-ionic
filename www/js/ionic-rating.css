@@ -1,0 +1,26 @@
+ul.rating li {
+  display: inline;
+  border: 0px;
+  background: none;
+  padding: 1px 1px;
+}
+ul.rating li i {
+  font-size: 20px;
+  color:#d17c63;
+}
+
+.star_rating ul.rating li {
+  display: inline;
+  border: 0px;
+  background: none;
+  padding: 1px 1px;
+}
+
+.star_rating ul.rating li i {
+  font-size: 60px;
+  color:white;
+}
+
+.star_rating .ion-ios-star-outline::before{
+	font-size:60px;
+}
